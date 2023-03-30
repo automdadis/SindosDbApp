@@ -1,0 +1,71 @@
+﻿@model SindosDbAppweb.Models.Project
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h3 class="alert">ΕΙΣΤΕ ΣΙΓΟΥΡΟΣ ΟΤΙ ΘΕΛΕΤΕ ΝΑ ΔΙΑΓΡΑΨΕΤΕ ΤΟ PROJECT</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Eos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Eos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WhoFund)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WhoFund)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Abroad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Abroad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.url)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.url)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sxolia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sxolia)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="ΔΙΑΓΡΑΦΗ" class="btn btn-danger" /> 
+        <a asp-action="Index" class="btn btn-outline-info">ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΛΙΣΤΑ</a>
+    </form>
+</div>

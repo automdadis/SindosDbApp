@@ -1,0 +1,63 @@
+﻿@model SindosDbAppweb.Models.Event
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>ΕΠΕΞΕΡΓΑΣΙΑ ΕΚΔΗΛΩΣΗΣ</h1>
+<hr />
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="row pb-2">
+        <div class="col-12">
+            <div class="border p-3 mt-4 row">
+                <div class="mb-3">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Hmnia" class="control-label"></label>
+                    <input asp-for="Hmnia" class="form-control" />
+                    <span asp-validation-for="Hmnia" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Region" class="control-label"></label>
+                    <input asp-for="Region" class="form-control" />
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Abroad" class="control-label"></label>
+                    <select asp-for="Abroad" asp-items="ViewBag.AbroadList" class="form-select">
+                        <option disabled selected>--ΕΠΙΛΕΞΤΕ--</option>
+                    </select>
+                    <span asp-validation-for="Abroad" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Url" class="control-label"></label>
+                    <input asp-for="Url" class="form-control" />
+                    <span asp-validation-for="Url" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Sxolia" class="control-label"></label>
+                    <input asp-for="Sxolia" class="form-control" />
+                    <span asp-validation-for="Sxolia" class="text-danger"></span>
+                </div>
+                <div class="mb-3 pb-2 col-2">
+                    <input type="submit" value="ΑΠΟΘΗΚΕΥΣΗ" class="btn btn-secondary" />
+                </div>
+                <div class="mb-3 col-3">
+                    <a asp-action="Index" class="btn btn-secondary">ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΛΙΣΤΑ</a>
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,170 @@
+﻿@model SindosDbAppweb.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>ΕΠΕΞΕΡΓΑΣΙΑ</h1>
+<hr />
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="row">
+        <div class="col-12">
+            <div class="border p-3 mt-4 row">
+                <div class="mb-3 col-4">
+                    <label asp-for="Onomateponimo" class="control-label"></label>
+                    <input asp-for="Onomateponimo" class="form-control" />
+                    <span asp-validation-for="Onomateponimo" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Eponimo" class="control-label"></label>
+                    <input asp-for="Eponimo" class="form-control" />
+                    <span asp-validation-for="Eponimo" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Onoma" class="control-label"></label>
+                    <input asp-for="Onoma" class="form-control" />
+                    <span asp-validation-for="Onoma" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Kod" class="control-label"></label>
+                    <input asp-for="Kod" class="form-control" />
+                    <span asp-validation-for="Kod" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="TypeId" class="control-label"></label>
+                    <input asp-for="TypeId" class="form-control" />
+                    <span asp-validation-for="TypeId" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Patronimo" class="control-label"></label>
+                    <input asp-for="Patronimo" class="form-control" />
+                    <span asp-validation-for="Patronimo" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Mitronimo" class="control-label"></label>
+                    <input asp-for="Mitronimo" class="form-control" />
+                    <span asp-validation-for="Mitronimo" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="BirthYear" class="control-label"></label>
+                    <input asp-for="BirthYear" class="form-control" />
+                    <span asp-validation-for="BirthYear" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Sex" class="control-label"></label>
+                    <select asp-for="Sex" asp-items="ViewBag.SexList" class="form-select">
+                        <option disabled selected>--Select Sex--</option>
+                    </select>
+                    <span asp-validation-for="Sex" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="IdCart" class="control-label"></label>
+                    <input asp-for="IdCart" class="form-control" />
+                    <span asp-validation-for="IdCart" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="AFM" class="control-label"></label>
+                    <input asp-for="AFM" class="form-control" />
+                    <span asp-validation-for="AFM" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="Town" class="control-label"></label>
+                    <input asp-for="Town" class="form-control" />
+                    <span asp-validation-for="Town" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="ZipCode" class="control-label"></label>
+                    <input asp-for="ZipCode" class="form-control" />
+                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="PhoneHome" class="control-label"></label>
+                    <input asp-for="PhoneHome" class="form-control" />
+                    <span asp-validation-for="PhoneHome" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="PhoneJob" class="control-label"></label>
+                    <input asp-for="PhoneJob" class="form-control" />
+                    <span asp-validation-for="PhoneJob" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="MobilePhone" class="control-label"></label>
+                    <input asp-for="MobilePhone" class="form-control" />
+                    <span asp-validation-for="MobilePhone" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-3">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="FromSchool" class="control-label"></label>
+                    <select asp-for="FromSchool" asp-items="ViewBag.SchoolList" class="form-select">
+                        <option disabled selected>--Select School</option>
+                    </select>
+                    <span asp-validation-for="FromSchool" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Orientation" class="control-label"></label>
+                    <input asp-for="Orientation" class="form-control" />
+                    <span asp-validation-for="Orientation" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="ChoiceNumber" class="control-label"></label>
+                    <input asp-for="ChoiceNumber" class="form-control" />
+                    <span asp-validation-for="ChoiceNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="RankNumber" class="control-label"></label>
+                    <input asp-for="RankNumber" class="form-control" />
+                    <span asp-validation-for="RankNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="IdPaneladikes" class="control-label"></label>
+                    <input asp-for="IdPaneladikes" class="form-control" />
+                    <span asp-validation-for="IdPaneladikes" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="Moria" class="control-label"></label>
+                    <input asp-for="Moria" class="form-control" />
+                    <span asp-validation-for="Moria" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="YearRegistry" class="control-label"></label>
+                    <input asp-for="YearRegistry" class="form-control" />
+                    <span asp-validation-for="YearRegistry" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="IBAN" class="control-label"></label>
+                    <input asp-for="IBAN" class="form-control" />
+                    <span asp-validation-for="IBAN" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-4">
+                    <label asp-for="HtmlNote" class="control-label"></label>
+                    <input asp-for="HtmlNote" class="form-control" />
+                    <span asp-validation-for="HtmlNote" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Sxolia" class="control-label"></label>
+                    <input asp-for="Sxolia" class="form-control" />
+                    <span asp-validation-for="Sxolia" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-2">
+                    <input type="submit" value="ΑΠΟΘΗΚΕΥΣΗ" class="btn btn-outline-info" />
+                </div>
+                <div class="mb-3 col-3">
+                    <a asp-action="Index" class="btn btn-outline-info">ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΛΙΣΤΑ</a>
+                </div>
+            </div>
+           
+        
+        </div>
+    </div>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

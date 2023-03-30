@@ -1,0 +1,93 @@
+﻿@model IEnumerable<SindosDbAppweb.Models.Project>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">ΛΙΣΤΑ ΕΡΓΑΣΙΩΝ</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-action="Create" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i>ΠΡΟΣΘΗΚΗ ΕΡΓΑΣΙΑΣ</a>
+        </div>
+    </div>
+</div>
+<table id="tblDataProject" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhoFund)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Abroad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sxolia)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoFund)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Abroad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sxolia)
+            </td>
+            <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a></td>
+            <td><a asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-arrow-up-right-square"></i></a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a></td>
+        </tr>
+}
+    </tbody>
+</table>
+@section Scripts{
+    <script src="~/js/Project.js"></script>
+}

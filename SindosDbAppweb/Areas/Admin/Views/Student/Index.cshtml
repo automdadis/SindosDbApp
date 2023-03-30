@@ -1,0 +1,196 @@
+﻿@model IEnumerable<SindosDbAppweb.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row align-middle pt-3">
+    <div class="col-6">
+        <h2 class="text-primary">ΛΙΣΤΑ ΜΑΘΗΤΩΝ</h2>
+    </div>
+    <div class="col-6 text-end pb-3">
+        <a asp-action="Create" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i>ΠΡΟΣΘΗΚΗ ΜΑΘΗΤΗ</a>
+    </div>
+<table id="tblDataStudent" class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Kod)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Onomateponimo)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.TypeId)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.Eponimo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Onoma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patronimo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mitronimo)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.BirthYear)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AFM)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Town)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneHome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneJob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobilePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromSchool)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Orientation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChoiceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPaneladikes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moria)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.YearRegistry)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.IBAN)
+            </th>*@
+           @* <th>
+                @Html.DisplayNameFor(model => model.HtmlNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sxolia)
+            </th>*@
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           @* <td>
+                @Html.DisplayFor(modelItem => item.Kod)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Onomateponimo)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.TypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eponimo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Onoma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patronimo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mitronimo)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthYear)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AFM)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneHome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneJob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobilePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromSchool)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Orientation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChoiceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RankNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPaneladikes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Moria)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.YearRegistry)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.IBAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HtmlNote)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Sxolia)
+            </td>*@
+            <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a></td>
+            <td><a asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-arrow-up-right-square"></i></a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a></td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+@section Scripts {
+    <script src="~/js/Student.js"></script>
+}
